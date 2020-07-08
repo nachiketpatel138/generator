@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- <h1>HELLO WORLD</h1> -->
+    <!-- {{password}} -->
+
+
+    <div class="container text-center my-5">
+        <h1>Password Generator</h1>
+        <form action="{% url 'password' %}" method="GET">
+            
+            <select class="form-select-sm " name="length" >
+                
+                <option value="6"> 6 </option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12" selected>12</option>
+                
+            </select>
+            <h2>Select Number</h2>
+            <div class="form-check">
+                <label class="form-check-label" for="flexCheckDefault1">
+                    <input class="form-check-input" type="checkbox" name="uppercase" id="flexCheckDefault1">
+
+                    UpperCase
+                </label>
+            </div>
+            <div class="form-check">
+
+                <label class="form-check-label" for="flexCheckChecked2">
+                    <input class="form-check-input" type="checkbox" name="numbers" id="flexCheckChecked2">
+                    Numbers
+                </label>
+            </div>
+            <div class="form-check">
+
+                <label class="form-check-label" for="flexCheckChecked3">
+                    <input class="form-check-input" type="checkbox" name="special_characters"
+                    id="flexCheckChecked3">
+                    Special Characters
+                </label>
+            </div>
+            <input type="submit" value="Generate Password" class="btn btn-primary">
+        </form>
+
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+            integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+            crossorigin="anonymous"></script>
+    </div>
+</body>
+
+</html>
